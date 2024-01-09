@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">archibook</string>
+    <string name="screen_home">Главная</string>
+    <string name="screen_articles_feed">Статьи</string>
+    <string name="screen_tutorials_feed">Туториалы</string>
+    <string name="screen_projects_feed">Проекты</string>
+</resources>
