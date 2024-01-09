@@ -1,4 +1,4 @@
-package com.rozoomcool.archibook.ui.projectsFeed
+package com.rozoomcool.archibook.ui.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,7 +27,6 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.rozoomcool.archibook.ui.home.TaskTabPanelItem
 
 @Composable
 fun TaskTabPanel() {

@@ -31,6 +31,7 @@ import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -55,7 +56,7 @@ fun AppNavBar(navigationState: NavigationState, items: List<NavigationItem>) {
                     navigationState.navigateTo(item.screen.route)
                 },
                 icon = item.iconResId,
-                label = { Text(stringResource(item.titleResId)) },
+                label = { Text(stringResource(item.titleResId), fontWeight = FontWeight.ExtraBold) },
                 alwaysShowLabel = false
             )
         }
@@ -75,7 +76,8 @@ fun CustomNavBar(navBarItems: @Composable RowScope.() -> Unit) {
             modifier = Modifier
                 .padding(16.dp)
                 .clip(RoundedCornerShape(16.dp))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .background(Color(0xFFECECEF))
+//                .background(MaterialTheme.colorScheme.surfaceVariant)
         ) {
             Row(
                 modifier = Modifier
@@ -126,7 +128,7 @@ fun CustomNavBarItem(
                 contentDescription = null,
                 tint = contentColor
             )
-            Spacer(Modifier.width(4.dp))
+            Spacer(Modifier.width(6.dp))
             AnimatedVisibility(
                 visible = selected
             ) {
